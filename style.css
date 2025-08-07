@@ -1,0 +1,94 @@
+body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    margin: 0;
+    background-color: #fce4ec; /* Rosa bem claro */
+    color: #333;
+    text-align: center;
+}
+
+.cabecalho {
+    background-color: #ac0357; /* Rosa forte */
+    color: white;
+    padding: 30px 20px;
+    border-bottom: 5px solid #ff27f4; /* Orquídea (roxo) */
+}
+
+.titulo-principal {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 3px 3px #ffd700; /* Sombra amarela */
+}
+
+.subtitulo {
+    font-size: 1.2em;
+}
+
+.conteudo-principal {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.secao-info, .secao-paquitas, .secao-curiosidades {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #ff1493; /* Rosa mais escuro */
+    border-bottom: 2px solid #ff3da4;
+    padding-bottom: 5px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.imagem-secao {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 5px solid #746200; /* Borda amarela */
+}
+
+.galeria-paquitas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria-paquitas img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #61015e; /* Borda roxa */
+    transition: transform 0.3s ease-in-out;
+}
+
+.galeria-paquitas img:hover {
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: '⭐ ';
+    text-align: left;
+    display: inline-block;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.rodape {
+    background-color: #b823b3; /* Orquídea (roxo) */
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
