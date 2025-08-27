@@ -12,6 +12,7 @@
             background-color: #f76394; /* Rosa bem claro */
             color: #333;
             text-align: center;
+            transition: all 0.3s ease; /* Para transição suave */
         }
 
         .cabecalho {
@@ -100,8 +101,45 @@
             padding: 20px;
             margin-top: 20px;
         }
-    </style>
 
+        /* Estilos para o modo de acessibilidade */
+        .acessibilidade {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #830343;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 9999;
+        }
+
+        /* Aumentar texto */
+        .aumentar-fonte {
+            font-size: 1.2em;
+        }
+
+        /* Mudar fundo e cor do texto */
+        .modo-alto-contraste {
+            background-color: #000;
+            color: #e26f6f;
+        }
+
+        .modo-alto-contraste h2,
+        .modo-alto-contraste p,
+        .modo-alto-contraste li {
+            color: #ac0707; /* Garantir que o texto tenha cor branca no alto contraste */
+        }
+
+        .modo-alto-contraste .cabecalho {
+            background-color: #ff4b5c;
+        }
+
+        .modo-alto-contraste .rodape {
+            background-color: #ff4b5c;
+        }
+    </style>
 </head>
 <body>
 
@@ -137,10 +175,30 @@
             </ul>
         </section>
     </main>
-    
+
     <footer class="rodape">
         <p>&copy; 2025 Xou da Xuxa.</p>
     </footer>
+
+    <!-- Botão de acessibilidade -->
+    <div class="acessibilidade" onclick="toggleAcessibilidade()">Acessibilidade</div>
+
+    <script>
+        // Função para alternar o modo de acessibilidade
+        function toggleAcessibilidade() {
+            const body = document.body;
+            body.classList.toggle('modo-alto-contraste'); // Muda para alto contraste
+            body.classList.toggle('aumentar-fonte'); // Aumenta o tamanho da fonte
+
+            // Altera o texto do botão dependendo do estado
+            const button = document.querySelector('.acessibilidade');
+            if (body.classList.contains('modo-alto-contraste')) {
+                button.textContent = 'Modo Normal';
+            } else {
+                button.textContent = 'Acessibilidade';
+            }
+        }
+    </script>
 
 </body>
 </html>
